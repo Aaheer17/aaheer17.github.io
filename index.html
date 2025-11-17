@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farzana Yasmin Ahmad - PhD Candidate</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            margin-bottom: 40px;
+            border-radius: 10px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .contact-links {
+            margin-top: 20px;
+        }
+
+        .contact-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1em;
+            display: inline-block;
+            padding: 8px 15px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .contact-links a:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        section {
+            background: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            color: #764ba2;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .research-areas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .research-item {
+            padding: 15px;
+            background: #f0f4ff;
+            border-left: 4px solid #667eea;
+            border-radius: 5px;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .skill-tag {
+            background: #e9ecef;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+
+        .publication {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 5px;
+        }
+
+        .publication-title {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .publication-venue {
+            font-style: italic;
+            color: #666;
+        }
+
+        .project {
+            margin-bottom: 25px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #764ba2;
+        }
+
+        .project-title {
+            font-weight: bold;
+            color: #764ba2;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .project a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .project a:hover {
+            text-decoration: underline;
+        }
+
+        .award {
+            margin-bottom: 15px;
+            padding: 15px;
+            background: #fff8e1;
+            border-left: 4px solid #ffc107;
+            border-radius: 5px;
+        }
+
+        .award-year {
+            font-weight: bold;
+            color: #f57c00;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #666;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            .contact-links a {
+                display: block;
+                margin: 10px 0;
+            }
+
+            section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Farzana Yasmin Ahmad</h1>
+            <p>PhD Candidate in Computer Science</p>
+            <p>University of Virginia - Biocomplexity Institute</p>
+            <div class="contact-links">
+                <a href="mailto:fa7sa@virginia.edu">📧 Email</a>
+                <a href="https://scholar.google.com/" target="_blank">🎓 Google Scholar</a>
+                <a href="https://www.linkedin.com/in/farzana-yasmin-ahmad/" target="_blank">💼 LinkedIn</a>
+                <a href="https://github.com/Aaheer17" target="_blank">💻 GitHub</a>
+            </div>
+        </header>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I am a PhD candidate in Computer Science at the Biocomplexity Institute, University of Virginia, advised by Professor Geoffrey C. Fox. My research focuses on developing and evaluating machine learning methods for complex scientific problems, with particular emphasis on generative AI for physics simulations.</p>
+            <p style="margin-top: 15px;">Expected graduation: <strong>December 2025</strong></p>
+        </section>
+
+        <section id="research">
+            <h2>Research Interests</h2>
+            <div class="research-areas">
+                <div class="research-item">
+                    <strong>Scientific ML for Complex Systems</strong>
+                    <p>Applying machine learning to scientific computing challenges</p>
+                </div>
+                <div class="research-item">
+                    <strong>Generative AI</strong>
+                    <p>Diffusion models, flow matching, VAEs, and fine-tuning techniques</p>
+                </div>
+                <div class="research-item">
+                    <strong>Model Evaluation</strong>
+                    <p>Rigorous evaluation of generative models for fidelity and reliability</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <div class="skills">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">PyTorch</span>
+                <span class="skill-tag">TensorFlow</span>
+                <span class="skill-tag">Hugging Face</span>
+                <span class="skill-tag">Diffusion Models</span>
+                <span class="skill-tag">Flow Matching</span>
+                <span class="skill-tag">Multi-GPU Training</span>
+                <span class="skill-tag">HPC</span>
+                <span class="skill-tag">Git/GitHub</span>
+                <span class="skill-tag">LLM Systems</span>
+                <span class="skill-tag">RAG Pipelines</span>
+            </div>
+        </section>
+
+        <section id="publications">
+            <h2>Selected Publications</h2>
+            <div class="publication">
+                <div class="publication-title">
+                    CaloBench: A Benchmark Study of Generative Models for Calorimeter Showers
+                </div>
+                <div class="publication-venue">
+                    Ahmad, F.Y., Venkataswamy, V., and Fox, G. - International Symposium on Benchmarking, Measuring and Optimization (Accepted - to appear), Springer, 2024.
+                </div>
+            </div>
+            <div class="publication">
+                <div class="publication-title">
+                    Distributed Principal Component Analysis for Real-time Big Data Processing
+                </div>
+                <div class="publication-venue">
+                    Meem, J.A., Ahmad, F.Y., and Adnan, M.A. - Proceedings of the 7th International Conference on Networking, Systems and Security, 2020, pp. 89–99.
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Featured Projects</h2>
+            
+            <div class="project">
+                <div class="project-title">LANTERN: Physics-Guided Diffusion for Calorimeter Showers</div>
+                <p>Developed a novel physics-guided diffusion model augmented with auxiliary training objectives including correlation-aware CFD, MVN likelihood, and energy consistency constraints. Implemented timestep weighting and warm-up strategies for improved training.</p>
+                <p><a href="https://github.com/Aaheer17" target="_blank">View on GitHub →</a></p>
+            </div>
+
+            <div class="project">
+                <div class="project-title">CaloBench: Systematic Benchmark of Generative Models</div>
+                <p>Conducted comprehensive multi-detector evaluation of generative models for calorimeter data. Introduced the Correlation Frobenius Distance (CFD) metric to quantify preservation of second-order structure and analyzed energy-stratified behavior.</p>
+                <p><a href="https://github.com/Aaheer17" target="_blank">View on GitHub →</a></p>
+            </div>
+
+            <div class="project">
+                <div class="project-title">PhinD-me-if-You-Can</div>
+                <p>Built an AI-powered tool during the Claude for Good 2025 hackathon (7.5 hours) that matches students with potential PhD advisors using LLM APIs. Implemented quantitative match scoring with qualitative explanations using Streamlit.</p>
+                <p><a href="https://github.com/Aaheer17" target="_blank">View on GitHub →</a></p>
+            </div>
+
+            <div class="project">
+                <div class="project-title">Calo-RAG: Literature Retrieval for Calorimeter Modeling</div>
+                <p>Built a RAG pipeline for practicing LLM+IR techniques with prompt templates, citation-aware retrieval, and basic reranking. Evaluated coverage using precision/recall metrics on curated queries.</p>
+                <p><a href="https://github.com/Aaheer17" target="_blank">View on GitHub →</a></p>
+            </div>
+        </section>
+
+        <section id="awards">
+            <h2>Awards & Recognition</h2>
+            <div class="award">
+                <span class="award-year">2025</span> - Lightning Talk, UVA CS Research Symposium
+            </div>
+            <div class="award">
+                <span class="award-year">2025</span> - Poster Presentation Finalist, UVA Engineering Research Symposium (UVERS)
+            </div>
+            <div class="award">
+                <span class="award-year">2023</span> - Invited to CRA-WP Graduate Cohort Workshop for Women
+            </div>
+            <div class="award">
+                <span class="award-year">2019</span> - Dean's List Scholarship, Bangladesh University of Engineering and Technology
+            </div>
+            <div class="award">
+                <span class="award-year">2017, 2018</span> - University Merit List Scholarship, BUET
+            </div>
+        </section>
+
+        <section id="teaching">
+            <h2>Teaching Experience</h2>
+            <h3>Graduate Teaching Assistant - University of Virginia</h3>
+            <ul style="margin-left: 20px; margin-top: 10px;">
+                <li><strong>Fall 2024:</strong> Economics of Distributed Systems</li>
+                <li><strong>Fall 2023:</strong> Artificial Intelligence</li>
+                <li><strong>Spring 2023:</strong> Computer Systems and Organization 2</li>
+                <li><strong>Fall 2022:</strong> Mobile Application Development</li>
+            </ul>
+            <h3 style="margin-top: 20px;">Lecturer (2019-2020)</h3>
+            <p>Department of Computer Science, United International University</p>
+        </section>
+
+        <section id="service">
+            <h2>Service & Leadership</h2>
+            <ul style="margin-left: 20px;">
+                <li><strong>2025:</strong> Mentorship Chair, Computer Science Engineering Graduate Student Group, UVA</li>
+                <li><strong>2023-2024:</strong> Vice President, Graduate Society of Women in Engineering, UVA</li>
+                <li><strong>2022-2023:</strong> President, Association of Bangladeshi Students at UVA</li>
+                <li><strong>2022-2023:</strong> International Citizen Leader Fellow at UVA</li>
+                <li><strong>2018:</strong> Batch Representative, Bangladeshi Women in CSE at BUET</li>
+            </ul>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Farzana Yasmin Ahmad. All rights reserved.</p>
+            <p>Last updated: November 2025</p>
+        </footer>
+    </div>
+</body>
+</html>
