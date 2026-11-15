@@ -270,19 +270,35 @@
                 padding: 20px;
             }
         }
+    
+        .skill-group { margin-bottom: 14px; }
+        .skill-group h3 { margin-top: 10px; font-size: 1.05em; }
+        .entry-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+        .entry-date { color: #666; font-size: 0.95em; white-space: nowrap; }
+        .project ul, .list { margin-left: 20px; margin-top: 8px; }
+        .project li, .list li { margin-bottom: 6px; }
+        .project-meta { color: #666; font-size: 0.95em; margin-bottom: 8px; }
+        .badge { display: inline-block; font-size: 0.75em; font-weight: bold; padding: 2px 8px; border-radius: 10px; margin-left: 6px; vertical-align: middle; }
+        .badge-accepted { background: #e3f6e8; color: #1e7b34; }
+        .badge-published { background: #e8ecff; color: #3f51b5; }
+        .publication a, .item a { color: #667eea; text-decoration: none; }
+        .publication a:hover, .item a:hover { text-decoration: underline; }
+        .item { margin-bottom: 14px; }
+        .cv-callout { margin-top: 15px; }
+        .cv-callout a { color: #667eea; font-weight: 600; text-decoration: none; }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <!-- Profile photo: put your photo at images/profile.jpg -->
             <img class="profile-photo" src="images/Farzana_headshot.jpeg" alt="Photo of Farzana Yasmin Ahmad"
                  onerror="this.style.display='none'">
             <h1>Farzana Yasmin Ahmad</h1>
-            <p>PhD Candidate in Computer Science</p>
-            <p>University of Virginia - Biocomplexity Institute</p>
+            <p>Ph.D. Candidate in Computer Science</p>
+            <p>Biocomplexity Institute, University of Virginia</p>
             <div class="contact-links">
                 <a href="mailto:fa7sa@virginia.edu">📧 Email</a>
+                <a href="Farzana_Ahmad_CV.pdf" target="_blank">📄 CV</a>
                 <a href="https://scholar.google.com/citations?user=t_YdVhoAAAAJ&hl=en" target="_blank">🎓 Google Scholar</a>
                 <a href="https://www.linkedin.com/in/farzana-yasmin-ahmad-1b2235145/" target="_blank">💼 LinkedIn</a>
                 <a href="https://github.com/Aaheer17" target="_blank">💻 GitHub</a>
@@ -291,27 +307,30 @@
 
         <section id="about">
             <h2>About Me</h2>
-            <p>I am a PhD candidate in Computer Science at the Biocomplexity Institute, University of Virginia, advised by Professor Geoffrey C. Fox. My research focuses on developing and evaluating machine learning methods for complex scientific problems, with particular emphasis on generative AI for physics simulations.</p>
+            <p>I am a Ph.D. candidate in Computer Science at the Biocomplexity Institute, University of Virginia, advised by Prof. Geoffrey C. Fox. My research is on machine learning for science: building physics-aware generative AI models and reliable ways to evaluate them. My dissertation develops multi-task gradient optimization for physics-aware diffusion surrogates in calorimeter shower simulation, a major computing bottleneck at the Large Hadron Collider.</p>
             <p style="margin-top: 15px;">Expected graduation: <strong>Spring 2027</strong></p>
+            <p class="cv-callout">📄 <a href="Farzana_Ahmad_CV.pdf" target="_blank">Download my full CV (PDF)</a></p>
         </section>
 
         <section id="education">
             <h2>Education</h2>
             <div class="education-item">
                 <h3>Ph.D. in Computer Science</h3>
-                <p><strong>University of Virginia</strong> — Biocomplexity Institute</p>
-                <p>Advisor: Professor Geoffrey C. Fox</p>
-                <p class="education-meta">2021 – Present (Expected: Spring 2027) &nbsp;|&nbsp; CGPA: 3.90 / 4.00</p>
+                <p><strong>University of Virginia</strong>, Biocomplexity Institute and Department of Computer Science</p>
+                <p>Advisor: Prof. Geoffrey C. Fox</p>
+                <p>Dissertation (in progress): <em>Multi-Task Gradient Optimization for Physics-Aware Diffusion Surrogates in Calorimeter Shower Simulation</em></p>
+                <p class="education-meta">2021 – Present (Expected: Spring 2027)</p>
             </div>
             <div class="education-item">
                 <h3>Master of Computer Science (M.C.S.)</h3>
-                <p><strong>University of Virginia</strong> — Department of Computer Science</p>
-                <p class="education-meta">Spring 2026 &nbsp;|&nbsp; CGPA: 3.90 / 4.00</p>
+                <p><strong>University of Virginia</strong>, Department of Computer Science</p>
+                <p class="education-meta">2026 &nbsp;|&nbsp; GPA: 3.90 / 4.00</p>
             </div>
             <div class="education-item">
                 <h3>B.Sc. in Computer Science and Engineering</h3>
-                <p><strong>Bangladesh University of Engineering and Technology (BUET)</strong></p>
-                <p class="education-meta">2015 – 2019 &nbsp;|&nbsp; CGPA: 3.69 / 4.00</p>
+                <p><strong>Bangladesh University of Engineering and Technology (BUET)</strong>, Dhaka, Bangladesh</p>
+                <p>Thesis: <em>Distributed Principal Component Analysis for Real-Time Big Data Processing</em></p>
+                <p class="education-meta">2015 – 2019 &nbsp;|&nbsp; GPA: 3.69 / 4.00</p>
             </div>
         </section>
 
@@ -319,149 +338,332 @@
             <h2>Research Interests</h2>
             <div class="research-areas">
                 <div class="research-item">
-                    <strong>Scientific ML for Complex Systems</strong>
-                    <p>Applying machine learning to scientific computing challenges</p>
+                    <strong>Machine Learning for Science</strong>
+                    <p>Applying ML to scientific computing problems</p>
                 </div>
                 <div class="research-item">
-                    <strong>Generative AI</strong>
-                    <p>Diffusion models, flow matching, VAEs, and fine-tuning techniques</p>
+                    <strong>Physics-Aware Generative AI</strong>
+                    <p>Diffusion, score-based, and flow models that respect physical structure</p>
                 </div>
                 <div class="research-item">
-                    <strong>Model Evaluation</strong>
-                    <p>Rigorous evaluation of generative models for fidelity and reliability</p>
+                    <strong>Reliable Evaluation</strong>
+                    <p>Trustworthy evaluation of AI for Science models</p>
                 </div>
+                <div class="research-item">
+                    <strong>High-Performance Computing</strong>
+                    <p>HPC for large-scale simulation and training</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="research-experience">
+            <h2>Research Experience</h2>
+            <div class="entry-head">
+                <h3 style="margin-top:0">Graduate Research Assistant, Biocomplexity Institute, UVA</h3>
+                <span class="entry-date">2022 – Present</span>
+            </div>
+            <p class="project-meta">Advisor: Prof. Geoffrey C. Fox</p>
+
+            <div class="project">
+                <div class="entry-head">
+                    <div class="project-title">LANTERN: Physics-Guided Diffusion Models</div>
+                    <span class="entry-date">2025 – Present</span>
+                </div>
+                <img class="project-image" src="images/lantern.png" alt="LANTERN model overview"
+                     onerror="this.style.display='none'">
+                <ul>
+                    <li>Designed two physics-aware training losses, based on energy counting statistics and detector geometry, that teach diffusion models physical structure that standard training ignores.</li>
+                    <li>Designed <strong>GradBlend</strong>, a conflict-aware gradient blending method that helps the model learn from both the standard loss and the physics-aware losses, even when they conflict. GradBlend outperforms state-of-the-art multi-task training strategies (KDD 2027, AI4Sciences Track).</li>
+                </ul>
+                <p><a href="https://github.com/Aaheer17/lantern-kdd27" target="_blank">View on GitHub →</a></p>
+            </div>
+
+            <div class="project">
+                <div class="entry-head">
+                    <div class="project-title">CaloBench: Benchmarking AI Models for Particle Physics Simulation</div>
+                    <span class="entry-date">2024 – Present</span>
+                </div>
+                <img class="project-image" src="images/calobench.png" alt="CaloBench benchmark results"
+                     onerror="this.style.display='none'">
+                <ul>
+                    <li>Developed a systematic framework for evaluating diffusion, score-based, normalizing-flow, and VAE models that speed up particle collision simulation at the Large Hadron Collider, using physics, computer vision, and statistical metrics.</li>
+                    <li>Found that even the best models fall short of the standard physics simulator, Geant4 (Bench 2024).</li>
+                    <li>Proposed the <strong>Correlation Frobenius Distance</strong>, a new metric that checks whether generated data matches both the fine-grained and overall structure of real detector data (KDD 2027, AI4Sciences Track).</li>
+                </ul>
+                <p><a href="https://github.com/Aaheer17/Benchmarking_Calorimeter_Shower_Simulation_Generative_AI" target="_blank">View on GitHub →</a></p>
+            </div>
+
+            <div class="project">
+                <div class="entry-head">
+                    <div class="project-title">Generalizing Models to New Detector Designs</div>
+                    <span class="entry-date">2025 – Present</span>
+                </div>
+                <ul>
+                    <li>Generalizing current models to data from a new detector (LEMURS) through added inputs and fine-tuning, so one trained model can serve multiple detector designs (in progress).</li>
+                </ul>
+                <p><a href="https://github.com/Aaheer17/LEMURS_analysis" target="_blank">Analysis →</a> &nbsp; <a href="https://github.com/Aaheer17/fine_tuning_on_Diffusion" target="_blank">Fine-tuning →</a></p>
+            </div>
+        </section>
+
+        <section id="publications">
+            <h2>Publications</h2>
+            <div class="publication">
+                <div class="publication-title">
+                    Lantern: Conflict-Aware Gradient Blending for Physics-Guided Diffusion Models in Calorimeter Simulation
+                    <span class="badge badge-accepted">ACCEPTED</span>
+                </div>
+                <div class="publication-venue">
+                    <strong>F. Y. Ahmad</strong>, V. Venkataswamy, and G. Fox. Proc. ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD 2027), AI4Sciences Track, 2027.
+                </div>
+            </div>
+            <div class="publication">
+                <div class="publication-title">
+                    CaloBench: A Benchmark Study of Generative Models for Calorimeter Showers
+                    <span class="badge badge-published">PUBLISHED</span>
+                </div>
+                <div class="publication-venue">
+                    <strong>F. Y. Ahmad</strong>, V. Venkataswamy, and G. Fox. Benchmarking, Measuring, and Optimizing (Bench 2024), Springer, 2025, pp. 70–95.
+                    <a href="https://doi.org/10.1007/978-981-96-5032-3_5" target="_blank">doi:10.1007/978-981-96-5032-3_5</a>
+                </div>
+            </div>
+            <div class="publication">
+                <div class="publication-title">
+                    Distributed Principal Component Analysis for Real-Time Big Data Processing
+                    <span class="badge badge-published">PUBLISHED</span>
+                </div>
+                <div class="publication-venue">
+                    J. A. Meem, <strong>F. Y. Ahmad</strong>, and M. A. Adnan. Proc. 7th International Conference on Networking, Systems and Security (NSysS), 2020, pp. 89–99.
+                </div>
+            </div>
+        </section>
+
+        <section id="presentations">
+            <h2>Presentations</h2>
+            <h3 style="margin-top:0">Contributed Talks</h3>
+            <div class="item"><span class="award-year">2026</span> - "Benchmarking and Advancing Generative Models for Calorimeter Shower Simulation," flash talk, ACM Capital Region Celebration of Women in Computing (CAPWIC 2026). <strong>Best Flash Talk, Graduate Category.</strong></div>
+            <div class="item"><span class="award-year">2025</span> - "Benchmarking and Advancing Generative Models for Calorimeter Shower Simulation," lightning talk, UVA Computer Science Research Symposium.</div>
+            <h3>Posters</h3>
+            <div class="item"><span class="award-year">2026</span> - "Reason Impossible: Can LLMs Forecast Wartime Returns?" ACM CAPWIC 2026.</div>
+            <div class="item"><span class="award-year">2026</span> - "Reason Impossible: Can LLMs Forecast Wartime Returns?" UVA Engineering Research Symposium (UVERS 2026).</div>
+            <div class="item"><span class="award-year">2025</span> - "Physics-Guided Autoregressive Diffusion Model for Fast Calorimeter Shower Simulation," UVA Engineering Research Symposium (UVERS). <strong>Finalist.</strong></div>
+        </section>
+
+        <section id="projects">
+            <h2>Additional Projects</h2>
+
+            <div class="project">
+                <div class="entry-head"><div class="project-title">Reason Impossible: Can LLMs Forecast Wartime Returns?</div><span class="entry-date">2025 – 2026</span></div>
+                <p class="project-meta">First author, with K. Noshin and Z. Mehrab, University of Virginia</p>
+                <img class="project-image" src="images/llm-migration.png" alt="LLM migration forecasting results"
+                     onerror="this.style.display='none'">
+                <ul>
+                    <li>Led an evaluation of GPT-5, Claude Sonnet 4.5, and Gemini 2.5 Flash on forecasting Ukrainian refugee returns from real conflict and migration data, showing LLMs are not yet reliable for humanitarian planning without human oversight.</li>
+                    <li>Presented as posters at CAPWIC 2026 and UVERS 2026.</li>
+                </ul>
+                <p><a href="https://github.com/Aaheer17/LLM_Migration" target="_blank">View on GitHub →</a></p>
+            </div>
+
+            <div class="project">
+                <div class="entry-head"><div class="project-title">Parallel MLP Training in JAX (In Progress)</div><span class="entry-date">2026</span></div>
+                <p class="project-meta">Personal project; JAX, Flax NNX, Optax, Claude Code</p>
+                <ul>
+                    <li>Building a JAX pipeline that trains hundreds of small neural networks in parallel across random seeds and learning rates in a single training call, using vectorization (vmap) and JIT compilation.</li>
+                    <li>Using Claude Code for AI-assisted development with project-level coding rules and required unit tests; reviewing all generated code and documenting corrections.</li>
+                </ul>
+                <p><a href="https://github.com/Aaheer17/jax-parallel-mlp" target="_blank">View on GitHub →</a></p>
+            </div>
+
+            <div class="project">
+                <div class="entry-head"><div class="project-title">Bayesian Optimization for Molecular Discovery</div><span class="entry-date">2026</span></div>
+                <p class="project-meta">Personal project; BoTorch, RDKit</p>
+                <ul>
+                    <li>Designed a pool-based Bayesian optimization loop that finds highly water-soluble molecules while measuring only a small fraction of candidates, using a Gaussian process surrogate on molecular fingerprints.</li>
+                    <li>Recovered 76% of the 10 most soluble molecules after measuring 14% of a 350-molecule pool, outperforming greedy search (51%) and random search (18%) over 20 runs.</li>
+                    <li>Showed that using model uncertainty improves discovery: the method found a new top-10 molecule in all 20 runs, while prediction-only search failed in 5.</li>
+                </ul>
+                <p><a href="https://github.com/Aaheer17/bo-molecular-discovery" target="_blank">View on GitHub →</a></p>
+            </div>
+
+            <div class="project">
+                <div class="entry-head"><div class="project-title">PhinD-me-if-You-Can: PhD Advisor Matching Tool</div><span class="entry-date">2025</span></div>
+                <p class="project-meta">Claude for Good 2025 Hackathon, Student Track, University of Virginia</p>
+                <ul>
+                    <li>Co-developed in 7.5 hours a Claude-powered app that reads a student's CV and statement of purpose and a professor's Google Scholar and lab pages, then scores research fit and advising-style fit with a written explanation.</li>
+                    <li>Developed the Streamlit front end, connected it to the back end, and maintained the repository.</li>
+                </ul>
+                <p><a href="https://github.com/Aaheer17/PhinD-me-if-You-Can" target="_blank">View on GitHub →</a></p>
+            </div>
+
+            <div class="project">
+                <div class="entry-head"><div class="project-title">Calo-RAG: Local Retrieval System for Calorimeter Literature</div><span class="entry-date">2025</span></div>
+                <p class="project-meta">Personal project; LangChain, FAISS, sentence-transformers</p>
+                <ul>
+                    <li>Developed a CPU-only retrieval pipeline over calorimeter physics papers using local PDF parsing, embeddings, and FAISS search, with no external APIs, so answers come with page-level citations.</li>
+                    <li>Built an evaluation harness for repeatable quality checks on a fixed question set.</li>
+                </ul>
+                <p><a href="https://github.com/Aaheer17/calo-rag" target="_blank">View on GitHub →</a></p>
+            </div>
+
+            <div class="project">
+                <div class="entry-head"><div class="project-title">Mixture-of-Experts Model for Fake News Detection</div><span class="entry-date">Fall 2023</span></div>
+                <p class="project-meta">Course project</p>
+                <ul>
+                    <li>Developed a fake news classifier on a sparse mixture-of-experts transformer (Switch Transformer) and compared it with BERT on two datasets (12.8K and 45K samples), reducing training time by up to 50% at comparable accuracy.</li>
+                </ul>
+                <p><a href="https://github.com/Zeyu-ZEYU/UVA-NLP-2023" target="_blank">View on GitHub →</a></p>
+            </div>
+
+            <div class="project">
+                <div class="entry-head"><div class="project-title">PCV: A Point Cloud-Based Network Verifier</div><span class="entry-date">Spring 2022</span></div>
+                <p class="project-meta">Course project</p>
+                <ul>
+                    <li>Designed a verifier that tests the robustness of PointNet, a 3D point-cloud classifier used in LiDAR-based autonomous driving, with bounded gradient-based perturbations; accuracy drops to 43.1% at perturbation size 0.20.</li>
+                </ul>
+                <p><a href="https://arxiv.org/abs/2301.11806" target="_blank">arXiv →</a> &nbsp; <a href="https://github.com/arupcsedu/PCV" target="_blank">GitHub →</a></p>
             </div>
         </section>
 
         <section id="skills">
             <h2>Technical Skills</h2>
-            <div class="skills">
-                <span class="skill-tag">Python</span>
-                <span class="skill-tag">PyTorch</span>
-                <span class="skill-tag">TensorFlow</span>
-                <span class="skill-tag">Hugging Face</span>
-                <span class="skill-tag">Diffusion Models</span>
-                <span class="skill-tag">Flow Matching</span>
-                <span class="skill-tag">Multi-GPU Training</span>
-                <span class="skill-tag">HPC</span>
-                <span class="skill-tag">Git/GitHub</span>
-                <span class="skill-tag">LLM Systems</span>
-                <span class="skill-tag">RAG Pipelines</span>
-            </div>
-        </section>
-
-        <section id="publications">
-            <h2>Selected Publications</h2>
-            <div class="publication">
-                <div class="publication-title">
-                    CaloBench: A Benchmark Study of Generative Models for Calorimeter Showers
-                </div>
-                <div class="publication-venue">
-                    Ahmad, F.Y., Venkataswamy, V., and Fox, G. - International Symposium on Benchmarking, Measuring and Optimization (Accepted - to appear), Springer, 2024.
+            <div class="skill-group">
+                <h3>Generative Modeling</h3>
+                <div class="skills">
+                    <span class="skill-tag">Diffusion and score-based models</span>
+                    <span class="skill-tag">Flow matching</span>
+                    <span class="skill-tag">VAEs</span>
+                    <span class="skill-tag">Conditional generation</span>
+                    <span class="skill-tag">Physics-informed neural networks</span>
+                    <span class="skill-tag">Fine-tuning and model adaptation</span>
                 </div>
             </div>
-            <div class="publication">
-                <div class="publication-title">
-                    Distributed Principal Component Analysis for Real-time Big Data Processing
+            <div class="skill-group">
+                <h3>Scientific and 3D Data</h3>
+                <div class="skills">
+                    <span class="skill-tag">Volumetric (3D voxel) data</span>
+                    <span class="skill-tag">Representation learning</span>
+                    <span class="skill-tag">Evaluation metric design</span>
+                    <span class="skill-tag">Energy-stratified analysis</span>
+                    <span class="skill-tag">Distribution modeling</span>
                 </div>
-                <div class="publication-venue">
-                    Meem, J.A., Ahmad, F.Y., and Adnan, M.A. - Proceedings of the 7th International Conference on Networking, Systems and Security, 2020, pp. 89–99.
+            </div>
+            <div class="skill-group">
+                <h3>LLMs and Agents</h3>
+                <div class="skills">
+                    <span class="skill-tag">RAG</span>
+                    <span class="skill-tag">Prompt engineering</span>
+                    <span class="skill-tag">LangChain</span>
+                    <span class="skill-tag">LangGraph</span>
+                    <span class="skill-tag">FAISS</span>
+                    <span class="skill-tag">sentence-transformers</span>
                 </div>
             </div>
-        </section>
-
-        <section id="projects">
-            <h2>Featured Projects</h2>
-
-            <div class="project">
-                <div class="project-title">LANTERN: Physics-Guided Diffusion for Calorimeter Showers</div>
-                <!-- Project figure: images/lantern.png -->
-                <img class="project-image" src="images/lantern.png" alt="LANTERN model overview"
-                     onerror="this.style.display='none'">
-                <p>Developed a novel physics-guided diffusion model augmented with auxiliary training objectives including correlation-aware CFD, MVN likelihood, and energy consistency constraints. Implemented timestep weighting and warm-up strategies for improved training.</p>
-                <p><a href="https://github.com/Aaheer17" target="_blank">View on GitHub →</a></p>
+            <div class="skill-group">
+                <h3>Statistics and Optimization</h3>
+                <div class="skills">
+                    <span class="skill-tag">Maximum likelihood estimation</span>
+                    <span class="skill-tag">Multivariate Gaussian modeling</span>
+                    <span class="skill-tag">Correlation analysis</span>
+                    <span class="skill-tag">PCA</span>
+                    <span class="skill-tag">Time-series analysis</span>
+                    <span class="skill-tag">Experimental design</span>
+                    <span class="skill-tag">Multi-task and gradient optimization</span>
+                    <span class="skill-tag">Bayesian optimization</span>
+                    <span class="skill-tag">Gaussian processes</span>
+                </div>
             </div>
-
-            <div class="project">
-                <div class="project-title">CaloBench: Systematic Benchmark of Generative Models</div>
-                <!-- Project figure: images/calobench.png -->
-                <img class="project-image" src="images/calobench.png" alt="CaloBench benchmark results"
-                     onerror="this.style.display='none'">
-                <p>Conducted a comprehensive multi-detector evaluation of generative models for calorimeter data. Introduced the Correlation Frobenius Distance (CFD) metric to quantify preservation of second-order structure and analyzed energy-stratified behavior.</p>
-                <p><a href="https://github.com/Aaheer17" target="_blank">View on GitHub →</a></p>
+            <div class="skill-group">
+                <h3>HPC and ML Systems</h3>
+                <div class="skills">
+                    <span class="skill-tag">Slurm</span>
+                    <span class="skill-tag">Multi-GPU training (PyTorch DDP, NCCL)</span>
+                    <span class="skill-tag">Mixed precision (AMP, BF16)</span>
+                    <span class="skill-tag">Parameter-efficient training</span>
+                    <span class="skill-tag">Scalable ML pipelines</span>
+                    <span class="skill-tag">JIT and vectorization (JAX)</span>
+                </div>
             </div>
-
-            <div class="project">
-                <div class="project-title">LLM-Based Forecasting of Crisis-Induced Migration</div>
-                <!-- Project figure: images/llm-migration.png -->
-                <img class="project-image" src="images/llm-migration.png" alt="LLM migration forecasting results"
-                     onerror="this.style.display='none'">
-                <p>Systematically evaluated GPT-5, Gemini 2.5 Flash, and Claude Sonnet 4.5 for forecasting temporal return migration patterns following the 2022 Russian invasion of Ukraine. Assessed forecasting accuracy, robustness, and reasoning processes using real-world migration, conflict, and historical data. Findings indicate LLMs require human oversight for reliable crisis forecasting.</p>
-                <p><a href="https://github.com/Aaheer17/LLM_Migration" target="_blank">View on GitHub →</a></p>
+            <div class="skill-group">
+                <h3>Frameworks and Libraries</h3>
+                <div class="skills">
+                    <span class="skill-tag">PyTorch</span>
+                    <span class="skill-tag">JAX</span>
+                    <span class="skill-tag">Flax NNX</span>
+                    <span class="skill-tag">Optax</span>
+                    <span class="skill-tag">TensorFlow</span>
+                    <span class="skill-tag">Hugging Face (Transformers, Diffusers)</span>
+                    <span class="skill-tag">BoTorch</span>
+                    <span class="skill-tag">RDKit</span>
+                    <span class="skill-tag">scikit-learn</span>
+                    <span class="skill-tag">NumPy</span>
+                    <span class="skill-tag">pandas</span>
+                    <span class="skill-tag">Matplotlib</span>
+                    <span class="skill-tag">HDF5</span>
+                    <span class="skill-tag">Zarr</span>
+                    <span class="skill-tag">Streamlit</span>
+                </div>
             </div>
-
-            <div class="project">
-                <div class="project-title">PhinD-me-if-You-Can</div>
-                <p>Built an AI-powered tool during the Claude for Good 2025 hackathon (7.5 hours) that matches students with potential PhD advisors using LLM APIs. Implemented quantitative match scoring with qualitative explanations using Streamlit.</p>
-                <p><a href="https://github.com/Aaheer17" target="_blank">View on GitHub →</a></p>
-            </div>
-
-            <div class="project">
-                <div class="project-title">Calo-RAG: Literature Retrieval for Calorimeter Modeling</div>
-                <p>Built a RAG pipeline for practicing LLM+IR techniques with prompt templates, citation-aware retrieval, and basic reranking. Evaluated coverage using precision/recall metrics on curated queries.</p>
-                <p><a href="https://github.com/Aaheer17" target="_blank">View on GitHub →</a></p>
+            <div class="skill-group">
+                <h3>Languages and Tools</h3>
+                <div class="skills">
+                    <span class="skill-tag">Python (primary)</span>
+                    <span class="skill-tag">C</span>
+                    <span class="skill-tag">C++</span>
+                    <span class="skill-tag">Java</span>
+                    <span class="skill-tag">R</span>
+                    <span class="skill-tag">Git and GitHub</span>
+                    <span class="skill-tag">Claude Code</span>
+                </div>
             </div>
         </section>
 
         <section id="awards">
-            <h2>Awards & Recognition</h2>
-            <div class="award">
-                <span class="award-year">2026</span> - Best Flash Talk Presentation (Graduate Category), ACM Capital Region Celebration of Women in Computing (CAPWIC)
-            </div>
-            <div class="award">
-                <span class="award-year">2025</span> - Lightning Talk, UVA CS Research Symposium
-            </div>
-            <div class="award">
-                <span class="award-year">2025</span> - Poster Presentation Finalist, UVA Engineering Research Symposium (UVERS)
-            </div>
-            <div class="award">
-                <span class="award-year">2023</span> - Invited to CRA-WP Graduate Cohort Workshop for Women
-            </div>
-            <div class="award">
-                <span class="award-year">2019</span> - Dean's List Scholarship, Bangladesh University of Engineering and Technology
-            </div>
-            <div class="award">
-                <span class="award-year">2017, 2018</span> - University Merit List Scholarship, BUET
-            </div>
+            <h2>Honors &amp; Awards</h2>
+            <div class="award"><span class="award-year">2026</span> - Selected Participant, AAAI-27 Doctoral Consortium</div>
+            <div class="award"><span class="award-year">2026</span> - Best Flash Talk Presentation (Graduate Category), ACM Capital Region Celebration of Women in Computing (CAPWIC)</div>
+            <div class="award"><span class="award-year">2025</span> - Poster Presentation Finalist, UVA Engineering Research Symposium (UVERS)</div>
+            <div class="award"><span class="award-year">2023</span> - Selected Participant, CRA-WP Graduate Cohort Workshop for Women</div>
+            <div class="award"><span class="award-year">2019</span> - Dean's List Scholarship, Bangladesh University of Engineering and Technology</div>
+            <div class="award"><span class="award-year">2017, 2018</span> - University Merit List Scholarship, BUET</div>
         </section>
 
         <section id="teaching">
-            <h2>Teaching Experience</h2>
-            <h3>Graduate Teaching Assistant - University of Virginia</h3>
-            <ul style="margin-left: 20px; margin-top: 10px;">
-                <li><strong>Fall 2024:</strong> Economics of Distributed Systems</li>
-                <li><strong>Fall 2023:</strong> Artificial Intelligence</li>
-                <li><strong>Spring 2023:</strong> Computer Systems and Organization 2</li>
-                <li><strong>Fall 2022:</strong> Mobile Application Development</li>
+            <h2>Teaching &amp; Mentoring</h2>
+            <div class="entry-head"><h3 style="margin-top:0">Graduate Teaching Assistant, Department of Computer Science, UVA</h3><span class="entry-date">2022 – 2024</span></div>
+            <ul class="list">
+                <li><strong>Fall 2024:</strong> CS 6501 Economics of Distributed Systems (Prof. Matheus Venturyne Xavier Ferreira). Graduate seminar; sole TA; 10+ students</li>
+                <li><strong>Fall 2023:</strong> CS 4710 Artificial Intelligence (Prof. Lu Feng). One of 4 TAs; about 100 students</li>
+                <li><strong>Spring 2023:</strong> CS 3130 Computer Systems and Organization 2 (Prof. Charles Reiss). One of 17 TAs; about 150 students</li>
+                <li><strong>Fall 2022:</strong> CS 4720 Mobile Application Development (Prof. Mark Sherriff). One of 2 TAs; 50+ students</li>
             </ul>
-            <h3 style="margin-top: 20px;">Lecturer (2019-2020)</h3>
-            <p>Department of Computer Science, United International University</p>
+            <p style="margin-top:8px">Held office hours, answered questions on Piazza, supported lab sessions, helped students debug their projects, and graded final projects and quizzes.</p>
+            <div class="entry-head" style="margin-top:20px"><h3 style="margin-top:0">Lecturer, Department of Computer Science, United International University, Bangladesh</h3><span class="entry-date">2019 – 2020</span></div>
+            <p>Taught four undergraduate courses (Microcontrollers and Microprocessors, Digital System Design, Operating Systems, Introduction to Programming Languages), designing lectures, assignments, and exams.</p>
+            <h3>Mentoring</h3>
+            <ul class="list">
+                <li>As Mentorship Chair of the Computer Science Graduate Student Group (2025), helped form 10 mentor–mentee pairs.</li>
+                <li>Mentored an incoming master's student through the transition to UVA.</li>
+            </ul>
         </section>
 
         <section id="service">
-            <h2>Service & Leadership</h2>
-            <ul style="margin-left: 20px;">
-                <li><strong>2025:</strong> Mentorship Chair, Computer Science Engineering Graduate Student Group, UVA</li>
-                <li><strong>2023-2024:</strong> Vice President, Graduate Society of Women in Engineering, UVA</li>
-                <li><strong>2022-2023:</strong> President, Association of Bangladeshi Students at UVA</li>
-                <li><strong>2022-2023:</strong> International Citizen Leader Fellow at UVA</li>
-                <li><strong>2018:</strong> Batch Representative, Bangladeshi Women in CSE at BUET</li>
+            <h2>Service &amp; Leadership</h2>
+            <ul class="list">
+                <li><strong>2025:</strong> Mentorship Chair, Computer Science Graduate Student Group, UVA. Helped form 10 mentor–mentee pairs.</li>
+                <li><strong>2023 – 2024:</strong> Vice President, Graduate Society of Women in Engineering, UVA. Organized a fall social event for about 20 attendees.</li>
+                <li><strong>2022 – 2023:</strong> President, Association of Bangladeshi Students, UVA. Led the committee in organizing two cultural events with about 170 attendees.</li>
+                <li><strong>2022 – 2023:</strong> International Citizen Leader Fellow, UVA</li>
+                <li><strong>2018:</strong> Batch Representative, Bangladeshi Women in CSE, BUET</li>
             </ul>
         </section>
 
+        <section id="coursework">
+            <h2>Selected Graduate Coursework</h2>
+            <p>Design and Analysis of Algorithms; Machine Learning for Engineers; Reinforcement Learning; Natural Language Processing; Neural Network Verification; Hardware Accelerators; Formal Methods; Network Security; Human-Computer Interaction; AI for Social Good.</p>
+        </section>
+
         <footer>
-            <p>&copy; 2025 Farzana Yasmin Ahmad. All rights reserved.</p>
-            <p>Last updated: November 2025</p>
+            <p>&copy; 2026 Farzana Yasmin Ahmad. All rights reserved.</p>
+            <p>Last updated: November 2026</p>
         </footer>
     </div>
 </body>
