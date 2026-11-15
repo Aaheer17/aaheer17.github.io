@@ -286,6 +286,31 @@
         .item { margin-bottom: 14px; }
         .cv-callout { margin-top: 15px; }
         .cv-callout a { color: #667eea; font-weight: 600; text-decoration: none; }
+    
+        html { scroll-behavior: smooth; }
+        section { scroll-margin-top: 80px; }
+        .topnav {
+            position: sticky; top: 0; z-index: 100;
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(6px);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            border-radius: 10px;
+            margin-bottom: 30px;
+            padding: 8px 12px;
+            display: flex; gap: 4px; justify-content: center; flex-wrap: wrap;
+        }
+        .topnav a {
+            color: #555; text-decoration: none; font-size: 0.95em; font-weight: 500;
+            padding: 7px 12px; border-radius: 6px; white-space: nowrap;
+            transition: background 0.2s, color 0.2s;
+        }
+        .topnav a:hover { background: #f0f4ff; color: #667eea; }
+        .topnav a.active { background: #667eea; color: white; }
+        .topnav a.nav-cv { border: 1px solid #764ba2; color: #764ba2; }
+        .topnav a.nav-cv:hover { background: #764ba2; color: white; }
+        @media (max-width: 768px) {
+            .topnav { flex-wrap: nowrap; justify-content: flex-start; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+        }
     </style>
 </head>
 <body>
@@ -305,9 +330,24 @@
             </div>
         </header>
 
+        <nav class="topnav">
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#research">Research</a>
+            <a href="#publications">Publications</a>
+            <a href="#presentations">Presentations</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#awards">Awards</a>
+            <a href="#teaching">Teaching</a>
+            <a href="#service">Service</a>
+            <a href="Farzana_Ahmad_CV.pdf" target="_blank" class="nav-cv">📄 CV</a>
+        </nav>
+
         <section id="about">
             <h2>About Me</h2>
             <p>I am a Ph.D. candidate in Computer Science at the Biocomplexity Institute, University of Virginia, advised by Prof. Geoffrey C. Fox. My research is on machine learning for science: building physics-aware generative AI models and reliable ways to evaluate them. My dissertation develops multi-task gradient optimization for physics-aware diffusion surrogates in calorimeter shower simulation, a major computing bottleneck at the Large Hadron Collider.</p>
+            <p style="margin-top: 15px;">I earned my Master of Computer Science from the University of Virginia in 2026, and my B.Sc. in Computer Science and Engineering from Bangladesh University of Engineering and Technology (BUET) in 2019.</p>
             <p style="margin-top: 15px;">Expected graduation: <strong>Spring 2027</strong></p>
             <p class="cv-callout">📄 <a href="Farzana_Ahmad_CV.pdf" target="_blank">Download my full CV (PDF)</a></p>
         </section>
@@ -666,5 +706,27 @@
             <p>Last updated: November 2026</p>
         </footer>
     </div>
+    <script>
+        // Highlight the nav link of the section currently in view
+        (function () {
+            var links = document.querySelectorAll('.topnav a[href^="#"]');
+            var map = {};
+            links.forEach(function (a) { map[a.getAttribute('href').slice(1)] = a; });
+            // Research Experience belongs to the "Research" tab; Coursework to "Service"
+            map['research-experience'] = map['research'];
+            map['coursework'] = map['service'];
+            var sections = document.querySelectorAll('section[id]');
+            function update() {
+                var current = null;
+                sections.forEach(function (sec) {
+                    if (sec.getBoundingClientRect().top <= 100) current = sec.id;
+                });
+                links.forEach(function (a) { a.classList.remove('active'); });
+                if (current && map[current]) map[current].classList.add('active');
+            }
+            window.addEventListener('scroll', update, { passive: true });
+            update();
+        })();
+    </script>
 </body>
 </html>
